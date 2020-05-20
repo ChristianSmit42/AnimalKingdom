@@ -1,6 +1,6 @@
 package de.neuefische.animalkingdom.model;
 
-public class Animal {
+public abstract class Animal {
     private String name;
 
     public Animal(String name) {
@@ -14,4 +14,13 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
+    public abstract String movement();
 }

@@ -1,9 +1,9 @@
 package de.neuefische.animalkingdom.model;
 
 public class Reptile extends Animal{
-    int heartchambers = 4;
-    boolean carnivore;
-    double temperature=15; // As starting value
+    private int heartchambers = 4;
+    private boolean carnivore;
+    private double temperature=15; // As starting value
 
     public Reptile(String name, boolean carnivore) {
         super(name);
@@ -28,4 +28,20 @@ public class Reptile extends Animal{
         }
         return "Time to desired Temperature: " + (desiredTemperature-actualTemperature)*0.3 + " Minutes";
     }
+
+    @Override
+    public String toString() {
+        return "Reptile{" +
+                "name=" + super.getName() +
+                "heartchambers=" + heartchambers +
+                ", carnivore=" + carnivore +
+                ", temperature=" + temperature +
+                '}';
+    }
+
+    public String movement() {
+        return "crawling";
+    }
+
+
 }
